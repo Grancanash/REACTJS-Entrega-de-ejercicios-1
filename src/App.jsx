@@ -6,7 +6,7 @@ import Home from './pages/Home';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/REACTJS-Entrega-de-ejercicios-1">
         <Routes>
             {/* Ruta Padre: Siempre carga el Layout */}
             <Route path="/" element={<Layout />}>

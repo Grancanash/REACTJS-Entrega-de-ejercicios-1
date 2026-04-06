@@ -8,4 +8,5 @@ export default defineConfig({
         react(),
         tailwindcss(),
     ],
+    base: '/REACTJS-Entrega-de-ejercicios-1/',
 })
