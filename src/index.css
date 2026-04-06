@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Digital7 Mono';
+    src: url('./assets/fonts/digital-7/digital-7_mono.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@plugin "daisyui" {
+    themes: corporate --default;
+}
+
+@theme {
+    --font-sans: "Sansation", ui-sans-serif, system-ui, sans-serif;
+    --font-digital: "Digital7 Mono", monospace;
+}
+
+@utility text-base {
+    font-size: var(--my-base-size);
+    line-height: 1.2;
+}
+
+/* Estilos base para las etiquetas HTML */
+@layer base {
+    h1 {
+        @apply text-3xl font-bold mb-6 text-base-content tracking-tight;
+    }
+
+    h2 {
+        @apply text-2xl font-semibold mb-4 text-base-content;
+    }
+
+    h3 {
+        @apply text-xl font-medium mb-3 text-base-content;
+    }
+
+    p {
+        @apply text-base mb-4 text-base-content/70;
+    }
+
+    a {
+        @apply transition-colors duration-200;
+    }
+
+    .my-list {
+        @apply list-disc list-outside ml-8 font-light mb-5;
+    }
+}
+
+:root {
+    font-size: 1rem;
+    color-scheme: light;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media (max-width: 1024px) {
+        font-size: 16px;
+    }
+}
+
+body {
+    margin: 0;
+    /* Usamos la variable que se define en @theme */
+    font-family: var(--font-sans);
+    @apply antialiased bg-base-100 text-base-content;
+}
